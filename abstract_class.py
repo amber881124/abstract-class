@@ -30,6 +30,21 @@ class Dog(Animal):
     def my(self):
         print('我是狗狗')
 
-d = Dog()
-d.make_sound()
 
+class Cat(Animal):
+    def make_sound(self):
+        print('Meow')
+
+    def my(self):
+        print('我是貓咪')
+
+d = Dog()
+c = Cat()
+
+for animal in [d, c]:
+    animal.make_sound()
+    animal.my()
+# Wang
+# 我是狗狗
+# Meow
+# 我是貓咪
