@@ -10,5 +10,26 @@ class Product(metaclass=ABCMeta):
 # TypeError: Can't instantiate abstract class Product with abstract method price
 # p = Product()
 
+# abstract class(寫來被繼承的，不能創實例)
+class Animal(metaclass=ABCMeta):
+    # abstract method(寫來被override)
+    # 全部的abstract method都要override才行
+    @abstractmethod
+    def make_sound(self):
+        pass
 
+    @abstractmethod
+    def my(self):
+        pass
+
+
+class Dog(Animal):
+    def make_sound(self):
+        print('Wang')
+
+    def my(self):
+        print('我是狗狗')
+
+d = Dog()
+d.make_sound()
 
